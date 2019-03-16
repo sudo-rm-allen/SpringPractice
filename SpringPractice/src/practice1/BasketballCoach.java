@@ -4,13 +4,13 @@ public class BasketballCoach implements Coach{
 
 	
 	public BasketballCoach() {
-		System.out.print("inside basketball coach");
+		System.out.println("inside basketball coach");
 	}
 	
 	@Override
 	public String getDailyWorkout() {
 		
-		return "Make 100 3 pointers";
+		return "\nMake 100 3 pointers";
 	}
 
 	@Override

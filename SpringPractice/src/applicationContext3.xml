@@ -8,12 +8,19 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	
-	<bean id="myCoach"
-		class="practice1.BasketballCoach">
-		
-		
+	<bean class="practice3.RandomFortuneService"
+		id = "myFortuneService">
 	
 	</bean>
+	
+	<bean id="myCoach"
+		class="practice3.BasketballCoach" scope="prototype">
+	
+		<constructor-arg ref = "myFortuneService"/>
+	
+	</bean>
+	
+	
 	
 
 	

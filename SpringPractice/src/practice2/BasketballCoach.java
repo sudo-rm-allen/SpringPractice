@@ -2,10 +2,16 @@ package practice2;
 
 public class BasketballCoach implements Coach{
 
+	private FortuneService fortuneService;
 	
-	public BasketballCoach() {
+	public BasketballCoach(FortuneService theFortuneService) {
+		
 		System.out.print("inside basketball coach");
+		fortuneService = theFortuneService;
+	
 	}
+	
+	
 	
 	@Override
 	public String getDailyWorkout() {
@@ -16,7 +22,7 @@ public class BasketballCoach implements Coach{
 	@Override
 	public String getDailyFortune() {
 		
-		return null;
+		return fortuneService.getDailyFortune();
 	}
 
 	
